@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --purple-900: #581c87;
+  --purple-800: #6b21a8;
+  --purple-700: #7c3aed;
+  --purple-200: #e9d5ff;
 }
 
 @theme inline {
@@ -24,3 +28,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Smooth transitions */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
