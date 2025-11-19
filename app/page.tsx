@@ -2,13 +2,16 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-purple-900 text-white p-4">
+    <div className="min-h-screen bg-[#4C1B7A] text-white p-4">
       {/* Main Container with Border and Spacing */}
-      <div className="h-full border border-gray-400">
+      <div className="h-full border border-gray-400 relative">
+        {/* Navbar Divider */}
+        <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-400 pointer-events-none"></div>
+        
         {/* Header Bar */}
         <header className="border-b border-gray-400">
           <nav className="flex items-center justify-between px-8 py-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1">
               <img
                 src="/DAWG.jpg"
                 alt="Dawg Snacks logo"
@@ -28,14 +31,16 @@ export default function Home() {
         </header>
 
         {/* Main Content */}
-        <main className="flex">
+        <main className="flex h-[90vh]">
           {/* LEFT PANEL - Food Collage */}
-          <div className="w-1/3 border-r border-gray-400 p-6 bg-[#4C1B7A]">
+          <div className="w-1/3 p-3 bg-[#4C1B7A]">
+            <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl">
               <img
                 src="/food_main.jpg"
                 alt="Food collage"
-                className="w-100 h-100 object-cover"
+                className="w-full h-full object-cover"
               />
+            </div>
           </div>
 
           {/* MIDDLE PANEL - Text Content */}
@@ -54,14 +59,20 @@ export default function Home() {
 
             {/* Body Text */}
             <p
-              className="text-lg leading-relaxed mb-6 text-gray-200"
+              className="text-lg leading-relaxed text-gray-200"
               style={{
                 fontFamily: "Inria Sans",
                 fontSize: "18px",
                 lineHeight: "140%",
+                borderTop: "1px solid #9CA3AF",
+                borderBottom: "1px solid #9CA3AF",
+                paddingTop: "1rem",
+                paddingBottom: "1rem",
+                marginTop: "1.5rem",
+                marginBottom: "1.5rem",
               }}
             >
-              Dawg snacks goal is to provide an easy and helpful way for uga students to make meals with limited ingredients at home!
+              Dawg Snacks' goal is to provide an easy and helpful way for UGA students to make meals with limited ingredients at home!
             </p>
 
             {/* Divider */}
@@ -80,11 +91,10 @@ export default function Home() {
             </div>
 
             {/* Bottom Image - Single Food Image */}
-            <div className="lg overflow-hidden h-auto w-100">
+            <div className="lg overflow-hidden h-auto w-auto">
               <img
                 src="/food-second.jpg"
                 alt="Food dish"
-                className="w-100 h-200 object-cover"
               />
             </div>
           </div>

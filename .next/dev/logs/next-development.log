@@ -1,1 +1,77 @@
-[00:00:01.007] Server  LOG      ✓ Ready in 794ms
+[00:00:01.638] Server  LOG      ✓ Ready in 1195ms
+[00:00:10.718] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:36:10.670] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:59:00.559] Browser ERROR   ./app/page.tsx:40:17
+Parsing ecmascript source code failed
+  38 |               />
+  39 |             </div>
+> 40 |           </div>
+     |                 ^
+> 41 |
+     | ^
+> 42 |           {/* MIDDLE PANEL - Text Content */}
+     | ^^^^^^^^^^^
+  43 |           <div className="w-1/3 p-8 bg-[#3B0270] flex flex-col justify-center">
+  44 |             {/* Heading */}
+  45 |             <div className="mb-8">
+
+Expected '</', got 'jsx text (
+
+          )'
+[02:59:01.548] Browser ERROR   ./app/page.tsx:41:17
+Parsing ecmascript source code failed
+  39 |               />
+  40 |             </div>
+> 41 |           </div>
+     |                 ^
+> 42 |
+     | ^
+> 43 |           {/* MIDDLE PANEL - Text Content */}
+     | ^^^^^^^^^^^
+  44 |           <div className="w-1/3 p-8 bg-[#3B0270] flex flex-col justify-center">
+  45 |             {/* Heading */}
+  46 |             <div className="mb-8">
+
+Expected '</', got 'jsx text (
+
+          )'
+[02:59:31.848] Browser ERROR   ./app/page.tsx:41:17
+Parsing ecmascript source code failed
+  39 |               />
+  40 |             </div>
+> 41 |           </div>
+     |                 ^
+> 42 |
+     | ^
+> 43 |           {/* MIDDLE PANEL - Text Content */}
+     | ^^^^^^^^^^^
+  44 |           <div className="w-1/3 p-8 bg-[#3B0270] flex flex-col justify-center">
+  45 |             {/* Heading */}
+  46 |             <div className="mb-8">
+
+Expected '</', got 'jsx text (
+
+          )'
+[03:02:13.720] Browser ERROR   ./app/page.tsx:76:11
+Parsing ecmascript source code failed
+  74 |
+  75 |             {/* Divider */
+> 76 |           </div>
+     |           ^
+  77 |
+  78 |           {/* RIGHT PANEL - Images */}
+  79 |           <div className="w-1/3 p-6 bg-[#3B0270] flex flex-col items-center justify-center">
+
+Expression expected
+[03:02:13.721] Browser ERROR   ./app/page.tsx:76:12
+Parsing ecmascript source code failed
+  74 |
+  75 |             {/* Divider */
+> 76 |           </div>
+     |            ^^^^^
+  77 |
+  78 |           {/* RIGHT PANEL - Images */}
+  79 |           <div className="w-1/3 p-6 bg-[#3B0270] flex flex-col items-center justify-center">
+
+Unterminated regexp literal
+[03:02:15.767] Server  LOG      ✓ Compiled in 40ms
