@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/sarve/Downloads/DawgSnacks/src/app/personal-info-page/%5Bid%5D/page.tsx"],"sourcesContent":["export default function PersonalInfoPage() {\r\n  return (\r\n    <div className=\"min-h-screen bg-linear-to-br from-[#4C1B7A] via-[#3B0270] to-[#2D0157] text-white p-8\">\r\n      <h1 className=\"text-3xl font-bold mb-6\">Personal Information</h1>\r\n      {/* Personal info content here */}\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAG,WAAU;sBAA0B;;;;;;;;;;;AAI9C","debugId":null}}]
+}

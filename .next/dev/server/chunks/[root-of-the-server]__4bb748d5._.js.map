@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/sarve/Downloads/DawgSnacks/src/app/api/userPosts/route.ts"],"sourcesContent":["export async function GET(request: Request) {\r\n  // Return empty array of posts\r\n  return Response.json([]);\r\n}\r\n\r\nexport async function POST(request: Request) {\r\n  return Response.json({ message: 'Create post' });\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAO,eAAe,IAAI,OAAgB;IACxC,8BAA8B;IAC9B,OAAO,SAAS,IAAI,CAAC,EAAE;AACzB;AAEO,eAAe,KAAK,OAAgB;IACzC,OAAO,SAAS,IAAI,CAAC;QAAE,SAAS;IAAc;AAChD","debugId":null}}]
+}

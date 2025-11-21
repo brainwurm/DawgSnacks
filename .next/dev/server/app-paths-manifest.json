@@ -1,3 +1,9 @@
 {
-  "/page": "app/page.js"
+  "/add-recipe/page": "app/add-recipe/page.js",
+  "/api/userPosts/route": "app/api/userPosts/route.js",
+  "/authenticated-view/page": "app/authenticated-view/page.js",
+  "/history/page": "app/history/page.js",
+  "/login-page/page": "app/login-page/page.js",
+  "/page": "app/page.js",
+  "/personal-info-page/[id]/page": "app/personal-info-page/[id]/page.js"
 }
