@@ -1,8 +1,42 @@
-export default function EditPostPage() {
-  return (
-    <div className="min-h-screen bg-linear-to-br from-[#4C1B7A] via-[#3B0270] to-[#2D0157] text-white p-8">
-      <h1 className="text-3xl font-bold mb-6">Edit Post</h1>
-      {/* Edit post form here */}
-    </div>
-  );
+"use client"
+import ModifyPost from "@/components/ModifyPost";
+import { useEffect, useState } from "react";
+
+type Post = {
+    _id: string,
+    userId: string,
+    title: string,
+    link: string,
+    sugar: number,
+    cholesterol: number,
+    fat: number,
+    carbs: number
+    instructions: string,
+    ingredients: string,
+    servings: string
+  }
+
+export default function EditPost({ params } : { params: Promise<{ id: string }> }) {
+    const [post, setPost] = useState<Post>();
+    const getPost = async () => {
+        try {
+            const response = await fetch(`/api/userPosts/${(await params).id}`);
+            if (!response.ok) {
+                throw new Error("Error getting the user post!");
+            }
+            const data = await response.json();
+            setPost(data);
+        } catch (error) {
+            alert(error);
+        }
+    }
+    //Gets the post to edit
+    useEffect(() => {
+        getPost();
+    }, []);
+ 
+    return (
+        post ? <ModifyPost editPost={true} post={post}/> : <p>Loading...</p>
+    ); //fix editPost error
 }
+
