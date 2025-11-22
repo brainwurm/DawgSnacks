@@ -1,19 +1,19 @@
 {
   "node": {
-    "00ec8eac022630d731bb8a6c5b54dfba9ccd79a921": {
+    "00b328b577269dd12ea9761e74578b8c5ffaecbd81": {
       "workers": {
         "app/add-recipe/page": {
-          "moduleId": "[project]/.next-internal/server/app/add-recipe/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/DawgSnacks/.next-internal/server/app/add-recipe/page/actions.js { ACTIONS_MODULE0 => \"[project]/DawgSnacks/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "doLogout",
-          "filename": "src/app/auth/authActions.ts"
+          "filename": "DawgSnacks/src/app/auth/authActions.ts"
         }
       },
       "layer": {
         "app/add-recipe/page": "action-browser"
       },
       "exportedName": "doLogout",
-      "filename": "src/app/auth/authActions.ts"
+      "filename": "DawgSnacks/src/app/auth/authActions.ts"
     }
   },
   "edge": {}

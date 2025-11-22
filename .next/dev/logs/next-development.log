@@ -1,103 +1,15 @@
-[00:00:00.924] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:01.036] Server  LOG      ✓ Ready in 775ms
-[00:00:03.490] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.679] Browser WARN    Image with src "/food_main.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:02:25.689] Server  LOG      ✓ Compiled in 47ms
-[00:02:34.333] Server  LOG      ✓ Compiled in 39ms
-[00:04:30.229] Server  LOG      ✓ Compiled in 40ms
-[00:04:43.963] Server  LOG      ✓ Compiled in 46ms
-[00:04:44.068] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
-[00:05:11.588] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:05:11.619] Server  LOG      ✓ Compiled in 29ms
-[00:05:11.736] Server  ERROR    ⨯ ReferenceError: Image is not defined
-[00:05:11.748] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
-[00:05:11.971] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:12.192] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
-[00:05:14.761] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:05:14.877] Server  ERROR    ⨯ ReferenceError: Image is not defined
-[00:05:14.891] Server  LOG      ✓ Compiled in 27ms
-[00:05:15.100] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:15.299] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
-[00:05:17.330] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:05:17.435] Server  ERROR    ⨯ ReferenceError: Image is not defined
-[00:05:17.445] Server  LOG      ✓ Compiled in 25ms
-[00:05:17.682] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:17.823] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
-[00:05:18.821] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:05:18.835] Server  LOG      ✓ Compiled in 29ms
-[00:05:18.942] Server  ERROR    ⨯ ReferenceError: Image is not defined
-[00:05:19.161] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:19.360] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
-[00:06:08.905] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:06:09.015] Server  LOG      ✓ Compiled in 29ms
-[00:06:09.316] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:09.528] Browser WARN    Image with src "/food_main.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:06:48.487] Server  LOG      ✓ Compiled in 43ms
-[00:06:58.706] Server  LOG      ✓ Compiled in 41ms
-[00:08:08.027] Server  LOG      ✓ Compiled in 26ms
-[00:08:31.779] Server  LOG      ✓ Compiled in 41ms
-[00:08:46.202] Server  LOG      ✓ Compiled in 36ms
-[00:10:30.024] Server  LOG      ✓ Compiled in 37ms
-[00:11:16.374] Server  LOG      ✓ Compiled in 28ms
-[00:11:26.996] Server  LOG      ✓ Compiled in 26ms
-[00:12:20.468] Server  LOG      ✓ Compiled in 26ms
-[00:12:44.534] Server  LOG      ✓ Compiled in 33ms
-[00:12:52.448] Server  LOG      ✓ Compiled in 40ms
-[00:13:31.606] Server  LOG      ✓ Compiled in 31ms
-[00:13:34.609] Server  LOG      ✓ Compiled in 27ms
-[00:13:36.017] Server  LOG      ✓ Compiled in 36ms
-[00:13:39.142] Server  LOG      ✓ Compiled in 37ms
-[00:13:41.560] Server  LOG      ✓ Compiled in 35ms
-[00:13:46.488] Server  LOG      ✓ Compiled in 35ms
-[00:13:50.939] Server  LOG      ✓ Compiled in 37ms
-[00:14:16.375] Server  LOG      ✓ Compiled in 24ms
-[00:14:20.130] Server  LOG      ✓ Compiled in 29ms
-[00:14:21.238] Server  LOG      ✓ Compiled in 21ms
-[00:14:28.234] Server  LOG      ✓ Compiled in 23ms
-[00:14:30.189] Server  LOG      ✓ Compiled in 24ms
-[00:14:34.667] Server  LOG      ✓ Compiled in 28ms
-[00:14:45.533] Server  LOG      ✓ Compiled in 25ms
-[00:14:46.747] Server  LOG      ✓ Compiled in 25ms
-[00:14:47.813] Server  LOG      ✓ Compiled in 24ms
-[00:14:49.997] Server  LOG      ✓ Compiled in 34ms
-[00:14:55.946] Server  LOG      ✓ Compiled in 33ms
-[00:15:12.157] Server  LOG      ✓ Compiled in 36ms
-[00:15:15.481] Server  LOG      ✓ Compiled in 24ms
-[00:15:24.161] Server  LOG      ✓ Compiled in 25ms
-[00:15:27.524] Server  LOG      ✓ Compiled in 23ms
-[00:15:30.095] Server  LOG      ✓ Compiled in 25ms
-[00:17:10.563] Server  LOG      ✓ Compiled in 34ms
-[00:17:14.974] Server  LOG      ✓ Compiled in 28ms
-[00:17:23.327] Server  LOG      ✓ Compiled in 37ms
-[00:17:30.299] Server  LOG      ✓ Compiled in 26ms
-[00:17:36.955] Server  LOG      ✓ Compiled in 25ms
-[00:21:34.194] Server  LOG      ✓ Compiled in 22ms
-[00:21:35.690] Server  LOG      ✓ Compiled in 39ms
-[00:21:46.534] Server  LOG      ✓ Compiled in 36ms
-[00:21:49.573] Server  LOG      ✓ Compiled in 25ms
-[00:21:52.148] Server  LOG      ✓ Compiled in 21ms
-[00:22:21.987] Server  LOG      ✓ Compiled in 35ms
-[00:22:27.878] Server  LOG      ✓ Compiled in 37ms
-[00:22:34.387] Server  LOG      ✓ Compiled in 25ms
-[00:22:38.379] Server  LOG      ✓ Compiled in 30ms
-[00:22:41.706] Server  LOG      ✓ Compiled in 24ms
-[00:22:44.058] Server  LOG      ✓ Compiled in 27ms
-[00:22:48.635] Server  LOG      ✓ Compiled in 27ms
-[00:22:54.283] Server  LOG      ✓ Compiled in 27ms
-[00:22:57.557] Server  LOG      ✓ Compiled in 39ms
-[00:23:08.628] Server  LOG      ✓ Compiled in 30ms
-[00:23:34.801] Server  LOG      ✓ Compiled in 57ms
-[00:24:35.717] Server  LOG      ✓ Compiled in 25ms
-[00:24:39.642] Server  LOG      ✓ Compiled in 27ms
-[00:24:44.509] Server  LOG      ✓ Compiled in 29ms
-[00:25:19.375] Server  LOG      ✓ Compiled in 29ms
-[00:26:28.751] Server  LOG      ✓ Compiled in 29ms
-[00:26:45.841] Server  LOG      ✓ Compiled in 33ms
-[00:27:32.635] Server  LOG      ✓ Compiled in 29ms
-[00:28:23.041] Server  LOG      ✓ Compiled in 26ms
-[00:28:44.894] Server  LOG      ✓ Compiled in 29ms
-[00:28:49.035] Server  LOG      ✓ Compiled in 26ms
-[00:29:04.999] Server  LOG      ✓ Compiled in 28ms
-[00:29:54.248] Server  LOG     Mock signIn called with: "credentials" {}
+[00:00:01.367] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.495] Server  LOG      ✓ Ready in 1176ms
+[00:05:01.310] Server  LOG     Connected to MongoDB.
+[00:05:02.002] Server  ERROR   Error creating post: ValidationError: userId: Cast to ObjectId failed for value "<PUT_A_REAL_USER_ID_HERE>" (type string) at path "userId" because of "BSONError"
+[00:11:23.021] Server  LOG     Connected to MongoDB.
+[00:11:34.487] Server  LOG      ○ Compiling /add-recipe ...
+[00:11:35.308] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:46.335] Server  LOG     Connected to MongoDB.
+[00:11:47.433] Server  LOG     Connected to MongoDB.
+[00:11:47.489] Server  LOG     Connected to MongoDB.
+[00:11:48.426] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/ramen.jpg" "received" null
+[00:12:48.408] Server  LOG     Connected to MongoDB.
+[00:12:48.681] Server  LOG     Connected to MongoDB.
+[00:12:48.725] Server  LOG     Connected to MongoDB.
+[00:12:48.942] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/ramen.jpg" "received" null

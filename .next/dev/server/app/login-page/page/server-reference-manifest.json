@@ -1,34 +1,19 @@
 {
   "node": {
-    "40e70000c622e382300984be3aba72ee82d38cffb4": {
+    "00b328b577269dd12ea9761e74578b8c5ffaecbd81": {
       "workers": {
         "app/login-page/page": {
-          "moduleId": "[project]/.next-internal/server/app/login-page/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "doCredentialLogin",
-          "filename": "src/app/auth/authActions.ts"
-        }
-      },
-      "layer": {
-        "app/login-page/page": "action-browser"
-      },
-      "exportedName": "doCredentialLogin",
-      "filename": "src/app/auth/authActions.ts"
-    },
-    "00ec8eac022630d731bb8a6c5b54dfba9ccd79a921": {
-      "workers": {
-        "app/login-page/page": {
-          "moduleId": "[project]/.next-internal/server/app/login-page/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/DawgSnacks/.next-internal/server/app/login-page/page/actions.js { ACTIONS_MODULE0 => \"[project]/DawgSnacks/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "doLogout",
-          "filename": "src/app/auth/authActions.ts"
+          "filename": "DawgSnacks/src/app/auth/authActions.ts"
         }
       },
       "layer": {
         "app/login-page/page": "action-browser"
       },
       "exportedName": "doLogout",
-      "filename": "src/app/auth/authActions.ts"
+      "filename": "DawgSnacks/src/app/auth/authActions.ts"
     }
   },
   "edge": {}
