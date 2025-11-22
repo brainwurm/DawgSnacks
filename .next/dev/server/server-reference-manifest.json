@@ -1,5 +1,64 @@
 {
-  "node": {},
+  "node": {
+    "00ec8eac022630d731bb8a6c5b54dfba9ccd79a921": {
+      "workers": {
+        "app/add-recipe/page": {
+          "moduleId": "[project]/.next-internal/server/app/add-recipe/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "doLogout",
+          "filename": "src/app/auth/authActions.ts"
+        },
+        "app/authenticated-view/page": {
+          "moduleId": "[project]/.next-internal/server/app/authenticated-view/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "doLogout",
+          "filename": "src/app/auth/authActions.ts"
+        },
+        "app/create-account-page/page": {
+          "moduleId": "[project]/.next-internal/server/app/create-account-page/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "doLogout",
+          "filename": "src/app/auth/authActions.ts"
+        },
+        "app/login-page/page": {
+          "moduleId": "[project]/.next-internal/server/app/login-page/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "doLogout",
+          "filename": "src/app/auth/authActions.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "doLogout",
+          "filename": "src/app/auth/authActions.ts"
+        }
+      },
+      "layer": {
+        "app/add-recipe/page": "action-browser",
+        "app/authenticated-view/page": "action-browser",
+        "app/create-account-page/page": "action-browser",
+        "app/login-page/page": "action-browser",
+        "app/page": "action-browser"
+      },
+      "filename": "src/app/auth/authActions.ts",
+      "exportedName": "doLogout"
+    },
+    "40e70000c622e382300984be3aba72ee82d38cffb4": {
+      "workers": {
+        "app/login-page/page": {
+          "moduleId": "[project]/.next-internal/server/app/login-page/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/auth/authActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "doCredentialLogin",
+          "filename": "src/app/auth/authActions.ts"
+        }
+      },
+      "layer": {
+        "app/login-page/page": "action-browser"
+      },
+      "filename": "src/app/auth/authActions.ts",
+      "exportedName": "doCredentialLogin"
+    }
+  },
   "edge": {},
-  "encryptionKey": "oVS/xm10PZ2e4xg9qbPZGT3bx+LmhLddEiKCc+SQ/GI="
+  "encryptionKey": "i9OvNDt5siSDvmH96/q0jA7mMzUHlc7neSmgttp1hHA="
 }

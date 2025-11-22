@@ -1,11 +1,17 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-
-export function middleware(request: NextRequest) {
-  // Middleware logic here
-  return NextResponse.next();
-}
+import { NextRequest, NextResponse } from "next/server";
 
 export const config = {
-  matcher: ['/authenticated-view/:path*', '/add-recipe/:path*', '/history/:path*'],
+    matcher: [
+        "/add-post",
+        "/add-recipe",
+        "/authenticated-view",
+        "/food-page",
+        "/history"
+    ],
 };
+
+// TODO: Re-enable auth middleware after NextAuth is configured
+// For now, allowing all requests to test frontend
+export default function middleware(request: NextRequest) {
+    return NextResponse.next();
+}

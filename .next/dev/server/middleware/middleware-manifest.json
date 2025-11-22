@@ -11,26 +11,34 @@
       "page": "/",
       "matchers": [
         {
-          "regexp": "/:nextData(_next/data/[^/]{1,})?/authenticated-view/:path*{(\\\\.json)}?",
-          "originalSource": "/authenticated-view/:path*"
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/add-post{(\\\\.json)}?",
+          "originalSource": "/add-post"
         },
         {
-          "regexp": "/:nextData(_next/data/[^/]{1,})?/add-recipe/:path*{(\\\\.json)}?",
-          "originalSource": "/add-recipe/:path*"
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/add-recipe{(\\\\.json)}?",
+          "originalSource": "/add-recipe"
         },
         {
-          "regexp": "/:nextData(_next/data/[^/]{1,})?/history/:path*{(\\\\.json)}?",
-          "originalSource": "/history/:path*"
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/authenticated-view{(\\\\.json)}?",
+          "originalSource": "/authenticated-view"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/food-page{(\\\\.json)}?",
+          "originalSource": "/food-page"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/history{(\\\\.json)}?",
+          "originalSource": "/history"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
         "__NEXT_BUILD_ID": "development",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "oVS/xm10PZ2e4xg9qbPZGT3bx+LmhLddEiKCc+SQ/GI=",
-        "__NEXT_PREVIEW_MODE_ID": "b2d825383f288f0e8f741c8877893136",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "eff2a23c77ab3b5fb7428997478ee1d304a95fc605e3c80fd2e8fe85e1c3a60a",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "ec18710789612f00d30dc92433aa6ae6eaa65b3947a8e64c8ccce176a99bb1bc"
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "i9OvNDt5siSDvmH96/q0jA7mMzUHlc7neSmgttp1hHA=",
+        "__NEXT_PREVIEW_MODE_ID": "041b55ee479d8172dc23654a0f1f29ba",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "4d7092f6166be6c88140999d4f7217c9867b24ff466a45e656da0de720494581",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "75ce9de3facd1e86fb563f7dc0e3633789d3a389cee239521882687659eb94dc"
       }
     }
   },

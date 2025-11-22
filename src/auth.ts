@@ -1,61 +1,43 @@
-import NextAuth from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
-import { authConfig } from "../config/auth.config";
-import type { JWT } from "next-auth/jwt";
-import type { Session } from "next-auth";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// TODO: Re-enable NextAuth when backend is ready
+// For now, using mock functions for frontend testing
 
-declare module "next-auth" {
-  interface Session {
-    user: {
-      id: string;
-      email?: string;
-      name?: string;
-      image?: string;
-    };
-  }
-}
+let isAuthenticated = false;
 
-declare module "next-auth/jwt" {
-  interface JWT {
-    id?: string;
-  }
-}
-
-export const { auth, signIn, signOut, handlers } = NextAuth({
-  ...authConfig,
-  providers: [
-    CredentialsProvider({
-      name: "Credentials",
-      credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" },
-      },
-      async authorize(credentials) {
-        // For now, accept any credentials
-        // In a real app, verify against database
-        if (credentials?.email && credentials?.password) {
-          return {
-            id: "1",
-            email: credentials.email,
-            name: credentials.email,
-          };
-        }
+export const auth = async () => {
+    if (!isAuthenticated) {
         return null;
-      },
-    }),
-  ],
-  callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
-      }
-      return token;
-    },
-    async session({ session, token }) {
-      if (session.user) {
-        session.user.id = token.id as string;
-      }
-      return session;
-    },
-  },
-});
+    }
+    return {
+        user: {
+            id: "mock-user-123",
+            email: "test@example.com",
+            name: "Test User"
+        },
+        expires: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
+    };
+};
+
+export const signIn = async (provider: string, options: any) => {
+    console.log("Mock signIn called with:", provider, options);
+    isAuthenticated = true;
+    return { ok: true };
+};
+
+export const signOut = async (options?: any) => {
+    console.log("Mock signOut called");
+    isAuthenticated = false;
+    if (options?.redirectTo) {
+        // For server-side redirect
+        if (typeof window === "undefined") {
+            console.log("Would redirect to:", options.redirectTo);
+        }
+    }
+    return { ok: true };
+};
+
+// Mock handlers for API routes
+export const handlers = {
+    GET: async (req: any) => new Response(JSON.stringify({ message: "Mock GET" })),
+    POST: async (req: any) => new Response(JSON.stringify({ message: "Mock POST" }))
+};

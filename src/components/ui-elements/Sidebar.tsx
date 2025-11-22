@@ -1,35 +1,65 @@
-import React from 'react';
-import Link from 'next/link';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+'use client';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { getSession } from "next-auth/react";
 
 export default function Sidebar() {
+  const [session, setSession] = useState<any>(null);
+
+  useEffect(() => {
+    async function fetchSession() {
+      const sessionData = await getSession();
+      setSession(sessionData);
+    }
+    fetchSession();
+  }, []);
+
+  const id = session?.user?.id;
+
   return (
-    <aside className="w-64 bg-[#3B0270] border-r border-gray-500 rounded-lg p-4">
-      <nav className="space-y-4">
-        <Link href="/authenticated-view">
-          <button className="w-full text-left px-4 py-2 text-white hover:bg-[#4C1B7A] rounded transition">
-            <img src="/home_icon.svg" alt="Home" className="inline mr-2 w-5 h-5" />
-            Home
-          </button>
+    <div className="flex flex-col items-center gap-20 bg-linear-to-br from-[#4C1B7A] via-[#3B0270] to-[#2D0157] w-40 h-full rounded-4xl relative py-8 ml-65 mt-10">
+      <Link href={`/personal-info-page/${id}`}>
+        <Image 
+          src="/profile_icon.svg"
+          alt="Profile Icon"
+          width={100}
+          height={100}
+          className="w-20 h-20 hover:scale-110 transition-transform duration-300 cursor-pointer"
+        />
+      </Link>
+
+      <Link href="/authenticated-view">
+        <Image
+          src="/home_icon.svg"
+          alt="Home icon"
+          width={100}
+          height={100}
+          className="w-20 h-20 hover:scale-110 transition-transform duration-300 cursor-pointer"
+        />
+      </Link>
+
+      <Link href="/history">
+        <Image
+          src="/history_icon.svg"
+          alt="History icon"
+          width={100}
+          height={100}
+          className="w-20 h-20 hover:scale-110 transition-transform duration-300 cursor-pointer"
+        />
+      </Link>
+
+      {/* Add Post Menu */}
+      <Link href="/add-recipe">
+        <Image
+          src="/add_icon.svg"
+          alt="Add post icon"
+          width={100}
+          height={100}
+          className="w-20 h-20 hover:scale-110 transition-transform duration-300 cursor-pointer"
+        />
         </Link>
-        <Link href="/add-recipe">
-          <button className="w-full text-left px-4 py-2 text-white hover:bg-[#4C1B7A] rounded transition">
-            <img src="/add_icon.svg" alt="Add" className="inline mr-2 w-5 h-5" />
-            Add Recipe
-          </button>
-        </Link>
-        <Link href="/history">
-          <button className="w-full text-left px-4 py-2 text-white hover:bg-[#4C1B7A] rounded transition">
-            <img src="/history_icon.svg" alt="History" className="inline mr-2 w-5 h-5" />
-            History
-          </button>
-        </Link>
-        <Link href="/personal-info-page/1">
-          <button className="w-full text-left px-4 py-2 text-white hover:bg-[#4C1B7A] rounded transition">
-            <img src="/profile_icon.svg" alt="Profile" className="inline mr-2 w-5 h-5" />
-            Profile
-          </button>
-        </Link>
-      </nav>
-    </aside>
+    </div>
   );
 }

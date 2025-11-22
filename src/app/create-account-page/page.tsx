@@ -1,105 +1,160 @@
-'use client'
+"use client";
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { FormEvent, useState } from 'react';
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
+import Header from "@/components/ui-elements/Header";
+import AuthLayout from "@/components/ui-elements/AuthLayout";
+
+type User = {
+    email: string;
+    firstName: string;
+    lastName: string;
+    username: string;
+    password: string;
+};
 
 export default function CreateAccountPage() {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+    const [firstName, setFirstName] = useState<string>("");
+    const [lastName, setLastName] = useState<string>("");
+    const [username, setUsername] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const router = useRouter();
+    const { data: session } = useSession();
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate account creation (no actual auth needed)
-    setTimeout(() => {
-      router.push('/authenticated-view');
-    }, 500);
-  };
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        if (!username || !email || !password) {
+            alert("Please enter all required fields!");
+            return;
+        }
 
-  return (
-    <div className="min-h-screen bg-linear-to-br from-[#4C1B7A] via-[#3B0270] to-[#2D0157] text-white p-4">
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="w-full max-w-md">
-          <Link 
-            href="/"
-            className="mb-8 text-white hover:opacity-80 transition inline-block"
-          >
-            ← Back
-          </Link>
+        const userData: User = {
+            email: email,
+            firstName: firstName,
+            lastName: lastName,
+            username: username,
+            password: password,
+        };
 
-          <div className="bg-[#3B0270] bg-opacity-50 backdrop-blur-sm border border-gray-500 rounded-lg p-8">
-            <h1 className="text-3xl font-bold mb-6 text-center">
-              <span style={{ color: "#FCD34D", fontFamily: "JejuHallasan" }}>Create Account</span>
-            </h1>
+        const url = "/api/users/";
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(userData),
+            });
+            if (!response.ok) {
+                const errorMessage = await response.text();
+                throw new Error(`Error creating user: ${errorMessage}`);
+            }
+            setFirstName("");
+            setLastName("");
+            setUsername("");
+            setEmail("");
+            setPassword("");
+            router.push("/login-page");
+        } catch (error) {
+            alert(error);
+        }
+    }
 
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div>
-                <label className="block text-sm mb-2">Name</label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 bg-[#2D0157] border border-gray-500 rounded text-white placeholder-gray-400"
-                  placeholder="Your name"
-                  required
-                />
-              </div>
+    return (
+        <>
+            <Header session={session || null} />
+            <AuthLayout imageUrl="/create_account_image.jpg" imageAlt="Create Account">
+            <div className="min-h-screen w-full p-8 bg-cover bg-center flex flex-col justify-center items-center" style={{ backgroundImage: 'url(/WhiteBackground.jpg)' }}>
+                <div className="w-full max-w-md">
+                <h2 className="text-5xl font-bold text-center text-gray-800 mb-20
+                ">Create Account</h2>
 
-              <div>
-                <label className="block text-sm mb-2">Email</label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-2 bg-[#2D0157] border border-gray-500 rounded text-white placeholder-gray-400"
-                  placeholder="your@email.com"
-                  required
-                />
-              </div>
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div>
+                            <label className="block text-gray-700 font-semibold mb-2">
+                                First Name
+                            </label>
+                            <input
+                                type="text"
+                                className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:outline-none focus:border-purple-600 text-gray-900"
+                                placeholder="First Name"
+                                value={firstName}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                    setFirstName(e.target.value)
+                                }
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-gray-700 font-semibold mb-2">
+                                Last Name
+                            </label>
+                            <input
+                                type="text"
+                                className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:outline-none focus:border-purple-600 text-gray-900"
+                                placeholder="Last Name"
+                                value={lastName}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                    setLastName(e.target.value)
+                                }
+                            />
+                        </div>
+                    </div>
 
-              <div>
-                <label className="block text-sm mb-2">Password</label>
-                <input
-                  type="password"
-                  className="w-full px-4 py-2 bg-[#2D0157] border border-gray-500 rounded text-white placeholder-gray-400"
-                  placeholder="••••••••"
-                  required
-                />
-              </div>
+                    <div>
+                        <label className="block text-gray-700 font-semibold mb-2">Username</label>
+                        <input
+                            type="text"
+                            className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:outline-none focus:border-purple-600 text-gray-900"
+                            placeholder="Choose a username"
+                            value={username}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setUsername(e.target.value)
+                            }
+                            required
+                        />
+                    </div>
 
-              <div>
-                <label className="block text-sm mb-2">Confirm Password</label>
-                <input
-                  type="password"
-                  className="w-full px-4 py-2 bg-[#2D0157] border border-gray-500 rounded text-white placeholder-gray-400"
-                  placeholder="••••••••"
-                  required
-                />
-              </div>
+                    <div>
+                        <label className="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input
+                            type="email"
+                            className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:outline-none focus:border-purple-600 text-gray-900"
+                            placeholder="Enter your email"
+                            value={email}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setEmail(e.target.value)
+                            }
+                            required
+                        />
+                    </div>
 
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="w-full px-6 py-3 bg-[#FCD34D] text-[#4C1B7A] font-bold rounded hover:bg-yellow-300 transition mt-6 disabled:opacity-50"
-              >
-                {isLoading ? 'Creating Account...' : 'Create Account'}
-              </button>
-            </form>
+                    <div>
+                        <label className="block text-gray-700 font-semibold mb-2">Password</label>
+                        <input
+                            type="password"
+                            className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:outline-none focus:border-purple-600 text-gray-900"
+                            placeholder="Create a password"
+                            value={password}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setPassword(e.target.value)
+                            }
+                            required
+                        />
+                    </div>
 
-            <p className="text-center text-gray-300 mt-6">
-              Already have an account?{' '}
-              <Link 
-                href="/login-page"
-                className="text-[#FCD34D] hover:underline"
-              >
-                Login
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Decorative bubbles */}
-      <div className="fixed bottom-0 left-0 -translate-x-3/8 translate-y-3/8 h-90 w-90 rounded-full bg-purple-900 blur-3xl opacity-40 z-[-1]"></div>
-      <div className="fixed top-0 right-0 translate-x-1/4 h-80 w-80 rounded-full bg-purple-900 blur-3xl opacity-40 z-[-1]"></div>
-    </div>
-  );
+                    <button
+                        type="submit"
+                        className="w-full bg-[#4C1B7A] text-white font-semibold py-3 rounded-lg hover:bg-[#3B0270] transition duration-300 mt-6"
+                    >
+                        Submit
+                    </button>
+                </form>
+                </div>
+            </div>
+        </AuthLayout>
+        </>
+    );
 }

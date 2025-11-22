@@ -1,40 +1,19 @@
-import Link from "next/link";
+import Navbar from "@/components/ui-elements/Navbar";
+import { auth } from "@/auth";
+import Header from "@/components/ui-elements/Header";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+
   return (
-    <div className="min-h-screen bg-[#4C1B7A] text-white p-4">
-      {/* Main Container with Border and Spacing */}
-      <div className="h-full border border-gray-400 relative">
-        {/* Navbar Divider */}
-        <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-400 pointer-events-none"></div>
-        
-        {/* Header Bar */}
-        <header className="border-b border-gray-400">
-          <nav className="flex items-center justify-between px-8 py-4">
-            <div className="flex items-center gap-1">
-              <img
-                src="/DAWG.jpg"
-                alt="Dawg Snacks logo"
-                className="w-25 h-25 object-cover"
-              />
-              <h1 className="text-2xl font-serif font-bold tracking-wide">Dawg Snacks</h1>
-            </div>
-            <div className="flex gap-6 items-center">
-              <Link 
-                href="/create-account-page"
-                className="text-white font-medium hover:opacity-80 transition cursor-pointer"
-              >
-                Create Account
-              </Link>
-              <Link 
-                href="/login-page"
-                className="rounded-full border-2 border-white bg-white text-purple-900 px-6 py-2 font-semibold hover:bg-gray-100 transition cursor-pointer"
-              >
-                Login
-              </Link>
-            </div>
-          </nav>
-        </header>
+    <div className="min-h-screen bg-[#4C1B7A] text-white">
+      <Header session={session} />
+      
+      <div className="p-4">
+        {/* Main Container with Border and Spacing */}
+        <div className="h-full border border-gray-400 relative">
+          {/* Navbar Divider */}
+          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-400 pointer-events-none"></div>
 
         {/* Main Content */}
         <main className="flex h-[90vh]">
@@ -105,6 +84,7 @@ export default function Home() {
             </div>
           </div>
         </main>
+        </div>
       </div>
     </div>
   );

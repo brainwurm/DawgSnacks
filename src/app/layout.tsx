@@ -1,6 +1,9 @@
+"use client";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SessionProvider } from "next-auth/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,10 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Dawg Snacks - Yummy Meals with Any Ingredient",
-  description: "Make delicious meals with limited ingredients. Dawg Snacks helps UGA students create yummy meals at home.",
-};
+// Note: Metadata cannot be exported from Client Components
+// export const metadata: Metadata = { ... };
 
 export default function RootLayout({
   children,
@@ -27,7 +28,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SessionProvider>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );

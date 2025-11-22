@@ -1,14 +1,22 @@
 [
   {
-    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/authenticated-view(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
-    "originalSource": "/authenticated-view/:path*"
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/add-post(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/add-post"
   },
   {
-    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/add-recipe(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
-    "originalSource": "/add-recipe/:path*"
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/add-recipe(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/add-recipe"
   },
   {
-    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/history(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
-    "originalSource": "/history/:path*"
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/authenticated-view(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/authenticated-view"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/food-page(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/food-page"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/history(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/history"
   }
 ]
